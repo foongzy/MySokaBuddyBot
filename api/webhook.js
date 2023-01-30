@@ -5,8 +5,8 @@ const TelegramBot = require('node-telegram-bot-api');
 
 module.exports = async (request, response) => {
     try {
-        const bot = new TelegramBot("339998513:AAGnf0mcpOmpbPmnyiiIxSoZmzPxV_H-aK4");
-        // const bot = new TelegramBot(process.env.TELEGRAM_TOKEN);
+        // const bot = new TelegramBot("339998513:AAGnf0mcpOmpbPmnyiiIxSoZmzPxV_H-aK4");
+        const bot = new TelegramBot(process.env.TELEGRAM_TOKEN);
 
         // Retrieve the POST request body that gets sent from Telegram
         const { body } = request;
