@@ -32,7 +32,7 @@ module.exports = async (request, response) => {
             // Check state of convo
             const res = await dbSend(baseURL, first_name, username, id, "ping")
             if (res.status==200){
-                if (res.data.convoState=="feedback"){
+                if (res.data.convoState=="feedback" && text!="/start"){
                     // Check if text fits requirements
                     if(text.length>=5 && text.length<=500 && text!="/cancel"){
                         const feedbackURL=baseURL+"/api/mysokabuddybot/"+id+"/feedbackSubmit"
