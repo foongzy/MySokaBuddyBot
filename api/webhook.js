@@ -87,7 +87,7 @@ module.exports = async (request, response) => {
                             const resShare = await dbSend(baseURL, first_name, username, id, "share")
                             break;
                         case "/about":
-                            message = '*About*\nMySokaBuddyBot is a Telegram bot that is aimed at allowing Soka Gakkai members to obtain daily encouragement and links easily and quickly.\n\n*Disclaimer*\nThis bot was created in good faith by a Soka member to be a handy companion to other members and friends and should strictly be used for such purposes only. By using MySokaBuddyBot, you agree to the collection of user data that will only be used for MySokaBuddyBot performance monitoring and to ensure that the bot is used for its intended purpose only. Thank you for your understanding'
+                            message = '*About*\nMySokaBuddyBot is a Telegram bot that allows Soka Gakkai members to obtain daily encouragement and information easily and quickly.\n\n*Disclaimer*\nThis bot was created in good faith by a Soka member to be a handy companion to other members and friends and should strictly be used for such purposes only. By using MySokaBuddyBot, you agree to the collection of user data that will only be used for MySokaBuddyBot performance monitoring and to ensure that the bot is used for its intended purpose only. Thank you for your understanding'
                             await bot.sendMessage(id, message, {parse_mode: 'Markdown'});
                             const resAbout = await dbSend(baseURL, first_name, username, id, "about")
                             break;
