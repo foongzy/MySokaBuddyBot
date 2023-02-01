@@ -82,7 +82,7 @@ module.exports = async (request, response) => {
                             const resHelp = await dbSend(baseURL, first_name, username, id, "help")
                             break;
                         case "/share":
-                            message = 'Hello! I am MySokaBuddyBot, a Telegram Bot that can provide encouragement to you:\nhttps://t.me/MySokaBuddyBot'
+                            message = 'Hello! I am MySokaBuddyBot, a Telegram Bot that can provide daily encouragement and information to you:\nhttps://t.me/MySokaBuddyBot'
                             await bot.sendMessage(id, message, {parse_mode: 'Markdown'});
                             const resShare = await dbSend(baseURL, first_name, username, id, "share")
                             break;
