@@ -57,7 +57,7 @@ module.exports = async (request, response) => {
                         }
                         await bot.sendMessage(id, message, {parse_mode: 'Markdown'});
                     }else{
-                        message = "Feedback needs to be longer than 5 characters and shorter than 500 characters. Your given feedback is "+text.length+" characters long. Type /cancel to cancel feedback"
+                        message = "Feedback needs to be longer than 5 characters and shorter than 500 characters and cannot be one of the queries. Your given feedback is "+text.length+" characters long. Type /cancel to cancel feedback"
                         await bot.sendMessage(id, message, {parse_mode: 'Markdown'});
                     }
                 }else{
